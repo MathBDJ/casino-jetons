@@ -1,9 +1,19 @@
-import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../AuthContext'
 
 export default function Layout({ titre, children }) {
   const { profile, signOut } = useAuth()
+  const { pathname } = useLocation()
   const estStaff = profile?.role === 'respo' || profile?.role === 'president'
+
+  // Sur téléphone, garde l'onglet actif visible dans le menu qui défile
+  useEffect(() => {
+    document
+      .querySelector('.nav a.active')
+      ?.scrollIntoView({ inline: 'center', block: 'nearest' })
+  }, [pathname])
+
   return (
     <div className="app">
       <header className="topbar">
@@ -14,9 +24,10 @@ export default function Layout({ titre, children }) {
             <span className="script">{titre}</span>
           </div>
         </div>
-        <span>
-          {profile?.nom} <button className="secondaire petit" onClick={signOut}>Déconnexion</button>
-        </span>
+        <div className="utilisateur">
+          <span className="nom-utilisateur">{profile?.nom}</span>
+          <button className="secondaire petit" onClick={signOut}>Déconnexion</button>
+        </div>
       </header>
       {estStaff && (
         <nav className="nav">
