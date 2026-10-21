@@ -308,3 +308,17 @@ html, body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
   .bandeau-alerte { flex-wrap: wrap; font-size: 0.9rem; padding: 10px 12px; }
   .bandeau-alerte a { width: 100%; text-align: center; }
 }
+/* Signature et pied de page */
+#root { min-height: 100dvh; display: flex; flex-direction: column; }
+.app, .login { flex: 1 0 auto; }
+.login { min-height: 0; }
+.content { padding-bottom: 24px; }
+.colonne { padding-bottom: 24px; }
+.signature {
+  position: relative; z-index: 1; text-align: center; line-height: 1.5;
+  padding: 18px 16px calc(78px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--bord); background: rgba(8, 12, 30, 0.6);
+  color: var(--creme-doux); font-size: 0.78rem;
+}
+.signature p { margin: 2px auto; max-width: 640px; }
+.signature strong { color: var(--creme); font-family: var(--serif); font-size: 0.9rem; }

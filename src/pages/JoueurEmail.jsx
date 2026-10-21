@@ -108,7 +108,7 @@ export default function JoueurEmail() {
           {email && (
             <button className="secondaire" onClick={changer}>Changer d'email</button>
           )}
-          <Link to="/login" className="discret centre">← Connexion équipe</Link>
+          <Link to="/login" className="discret centre">Accès organisation →</Link>
         </div>
 
         {email && joueurs && joueurs.length > 0 && <TablesDispo miennes={miennes} />}

@@ -18,13 +18,15 @@ import Joueur from './pages/Joueur'
 import JoueurEmail from './pages/JoueurEmail'
 import AlerteBanniere from './components/AlerteBanniere'
 import AlerteBouton from './components/AlerteBouton'
+import Signature from './components/Signature'
 
 const STAFF = ['respo', 'president']
 
 function Accueil() {
   const { session, profile, loading, signOut } = useAuth()
   if (loading) return <div className="login"><p>Chargement…</p></div>
-  if (!session) return <Navigate to="/login" replace />
+  // Visiteur non connecté : la page d'accueil est celle des joueurs
+  if (!session) return <Navigate to="/joueur" replace />
   if (!profile || !profile.actif)
     return (
       <div className="login">
@@ -89,6 +91,7 @@ export default function App() {
           <Route path="/banquier/historique" element={<Protege roles={['banquier']}><MonHistorique /></Protege>} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        <Signature />
       </BrowserRouter>
     </AuthProvider>
   )

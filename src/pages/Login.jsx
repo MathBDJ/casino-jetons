@@ -25,7 +25,7 @@ export default function Login() {
           <span className="script">La Nuit de l'Institut</span>
           <h1>Le Grand Casino</h1>
         </div>
-        <p className="discret centre">Connexion de l'équipe</p>
+        <p className="discret centre">Espace organisation</p>
         <input
           type="email"
           placeholder="Email"
