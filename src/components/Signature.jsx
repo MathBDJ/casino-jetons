@@ -3,11 +3,9 @@ export default function Signature() {
   return (
     <footer className="signature no-print">
       <p>
-        <strong>© {annee} Mathieu BERNARD DE JANDIN</strong> — Tous droits réservés.
-      </p>
-      <p>
-        Application conçue et développée par Mathieu BERNARD DE JANDIN. Toute reproduction, copie,
-        modification ou réutilisation, totale ou partielle, sans son autorisation écrite est interdite.
+        <strong>© {annee} Mathieu BERNARD DE JANDIN</strong>
+        <span> — Tous droits réservés.</span>
+        <span className="sig-interdit"> Reproduction interdite.</span>
       </p>
     </footer>
   )
