@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import TablesDispo from '../components/TablesDispo'
+import LienPlan from '../components/LienPlan'
 
 function lire() {
   try {
@@ -108,6 +109,7 @@ export default function JoueurEmail() {
           {email && (
             <button className="secondaire" onClick={changer}>Changer d'email</button>
           )}
+          <LienPlan />
           <Link to="/login" className="discret centre">Accès organisation →</Link>
         </div>
 

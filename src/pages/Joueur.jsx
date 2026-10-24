@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
 import TablesDispo from '../components/TablesDispo'
+import LienPlan from '../components/LienPlan'
 
 export default function Joueur() {
   const { token } = useParams()
@@ -43,6 +44,7 @@ export default function Joueur() {
         </div>
 
         <TablesDispo miennes={joueur.table_nom ? [joueur.table_nom] : []} />
+        <LienPlan />
       </div>
     </div>
   )

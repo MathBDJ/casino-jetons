@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../lib/supabase'
+import LienPlan from '../components/LienPlan'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -44,6 +45,7 @@ export default function Login() {
         <button type="submit" disabled={envoi}>
           {envoi ? 'Connexion…' : 'Se connecter'}
         </button>
+        <LienPlan />
         <Link to="/joueur" className="discret centre">Je suis joueur : voir mes jetons →</Link>
       </form>
     </div>

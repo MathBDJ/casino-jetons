@@ -14,6 +14,8 @@ import Banquier from './pages/Banquier'
 import MonHistorique from './pages/MonHistorique'
 import Recherche from './pages/Recherche'
 import Alertes from './pages/Alertes'
+import Plan from './pages/Plan'
+import PlanGestion from './pages/PlanGestion'
 import Joueur from './pages/Joueur'
 import JoueurEmail from './pages/JoueurEmail'
 import AlerteBanniere from './components/AlerteBanniere'
@@ -76,9 +78,11 @@ export default function App() {
           <Route path="/login" element={<PageLogin />} />
           <Route path="/joueur" element={<JoueurEmail />} />
           <Route path="/j/:token" element={<Joueur />} />
+          <Route path="/plan" element={<Plan />} />
           <Route path="/recherche" element={<Protege roles={['respo', 'president', 'banquier']}><Recherche /></Protege>} />
           <Route path="/respo" element={<Protege roles={STAFF}><Respo /></Protege>} />
           <Route path="/respo/tables" element={<Protege roles={STAFF}><Tables /></Protege>} />
+          <Route path="/respo/plan" element={<Protege roles={STAFF}><PlanGestion /></Protege>} />
           <Route path="/respo/equipe" element={<Protege roles={STAFF}><Equipe /></Protege>} />
           <Route path="/respo/historique" element={<Protege roles={STAFF}><Historique /></Protege>} />
           <Route path="/respo/classement" element={<Protege roles={STAFF}><Classement /></Protege>} />

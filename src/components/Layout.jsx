@@ -34,6 +34,7 @@ export default function Layout({ titre, children }) {
           <NavLink to="/respo" end>Joueurs</NavLink>
           <NavLink to="/recherche">Recherche</NavLink>
           <NavLink to="/respo/tables">Tables</NavLink>
+          <NavLink to="/respo/plan">🗺️ Plan</NavLink>
           <NavLink to="/respo/historique">Historique</NavLink>
           <NavLink to="/respo/classement">Classement</NavLink>
           <NavLink to="/respo/alertes">🚨 Alertes</NavLink>
@@ -49,6 +50,7 @@ export default function Layout({ titre, children }) {
           <NavLink to="/banquier" end>Ma table</NavLink>
           <NavLink to="/banquier/historique">Mon historique</NavLink>
           <NavLink to="/recherche">Recherche joueur</NavLink>
+          <NavLink to="/plan">🗺️ Plan</NavLink>
         </nav>
       )}
       <main className="content">{children}</main>
