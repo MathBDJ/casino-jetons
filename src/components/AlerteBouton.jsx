@@ -110,7 +110,7 @@ function Formulaire({ onClose }) {
     return (
       <div className="modal-fond">
         <div className="modal">
-          <h2>🚨 Alerte envoyée</h2>
+          <h2>Alerte envoyée</h2>
           <p className="ok">
             ✅ Les responsables ont été prévenus. Quelqu'un va intervenir. Reste dans un endroit sûr,
             avec d'autres personnes.
@@ -137,7 +137,7 @@ function Formulaire({ onClose }) {
                 à jour toute seule.
               </p>
             )}
-            <a className="appel urgence-112" href="tel:112">🚑 Urgence vitale : 112</a>
+            <a className="appel urgence-112" href="tel:112">Urgence vitale : 112</a>
           </div>
 
           <div className="boutons">
@@ -152,7 +152,7 @@ function Formulaire({ onClose }) {
   return (
     <div className="modal-fond">
       <div className="modal">
-        <h2>🚨 Signaler un problème</h2>
+        <h2>Signaler un problème</h2>
 
         <div className="urgence">
           {publics.length > 0 && <strong>Responsables à appeler :</strong>}
@@ -161,7 +161,7 @@ function Formulaire({ onClose }) {
               📞 {c.nom} — {c.telephone}
             </a>
           ))}
-          <a className="appel urgence-112" href="tel:112">🚑 Urgence vitale : 112</a>
+          <a className="appel urgence-112" href="tel:112">Urgence vitale : 112</a>
           <p className="discret" style={{ margin: 0 }}>
             Après l'envoi de ton alerte, des responsables pourront te communiquer leur numéro ici.
           </p>
@@ -210,7 +210,7 @@ export default function AlerteBouton() {
   const [ouvert, setOuvert] = useState(false)
   return (
     <>
-      <button className="sos no-print" onClick={() => setOuvert(true)}>🚨 Signaler un problème</button>
+      <button className="sos no-print" onClick={() => setOuvert(true)}>Signaler un problème</button>
       {ouvert && <Formulaire onClose={() => setOuvert(false)} />}
     </>
   )

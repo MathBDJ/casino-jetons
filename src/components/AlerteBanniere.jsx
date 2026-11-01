@@ -44,7 +44,7 @@ export default function AlerteBanniere() {
       {derniere && (
         <div className="bandeau-alerte no-print">
           <span>
-            🚨 {nouvelles.length} alerte(s) sécurité en attente — {derniere.lieu} :{' '}
+            {nouvelles.length} alerte(s) sécurité en attente — {derniere.lieu} :{' '}
             {derniere.message.slice(0, 90)}
           </span>
           <Link to="/respo/alertes">Traiter</Link>
@@ -52,7 +52,7 @@ export default function AlerteBanniere() {
       )}
       {!son && (
         <button className="son-btn secondaire no-print" onClick={() => setSon(activerSon())}>
-          🔔 Activer le son des alertes
+          Activer le son des alertes
         </button>
       )}
     </>
