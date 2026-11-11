@@ -346,3 +346,17 @@ html, body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
 .plan-bloc { display: flex; flex-direction: column; gap: 10px; }
 .plan-image { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--bord); background: #fff; }
 .plan-vide { text-align: center; padding: 28px 12px; font-size: 1rem; }
+/* QR code global */
+.qr-affiche { background: #fff; color: #111; border-radius: 18px; padding: 24px; max-width: 520px; margin: 0 auto;
+  text-align: center; display: flex; flex-direction: column; gap: 6px; align-items: center; }
+.qr-affiche h2 { color: #111; margin: 0; font-size: 2rem; }
+.qr-affiche .script { color: #6b5a2e; font-size: 1.6rem; }
+.qr-affiche img { width: 100%; max-width: 420px; height: auto; }
+.qr-affiche p { margin: 0; }
+.qr-affiche .discret { color: #555; }
+.qr-lien { font-size: 0.8rem; color: #555; word-break: break-all; }
+@media print {
+  .qr-affiche { max-width: 100%; padding-top: 40px; }
+  .qr-affiche h2 { font-size: 3rem; }
+  .qr-affiche img { max-width: 560px; }
+}

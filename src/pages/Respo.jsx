@@ -57,7 +57,7 @@ function FormInscription({ joueurs, onClose, onDone }) {
       <input
         type="number"
         min="0"
-        placeholder="Solde initial (jetons)"
+        placeholder="Jetons achetés à l'inscription (facultatif)"
         value={solde}
         onChange={(e) => setSolde(e.target.value)}
       />
