@@ -65,6 +65,7 @@ export default function JoueurEmail() {
       <div className="colonne">
         <div className="card" style={{ maxWidth: 'none' }}>
           <div className="marque-grande">
+            <img src="/logo.png" alt="" />
             <span className="script">La Nuit de l'Institut</span>
             <h1>Mes jetons</h1>
           </div>

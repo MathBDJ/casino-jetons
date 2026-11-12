@@ -360,3 +360,15 @@ html, body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
   .qr-affiche h2 { font-size: 3rem; }
   .qr-affiche img { max-width: 560px; }
 }
+   /* Logo et filigrane */
+   html::before {
+     content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
+     background: url('/filigrane.png') center 58% / min(80vw, 760px) auto no-repeat;
+   }
+   .marque img { height: 44px; }
+   .marque-grande img { height: 120px; margin-bottom: 4px; }
+   @media (max-width: 720px) {
+     .marque img { height: 34px; }
+     .marque-grande img { height: 96px; }
+   }
+   @media print { html::before { display: none; } }

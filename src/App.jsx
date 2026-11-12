@@ -21,6 +21,7 @@ import JoueurEmail from './pages/JoueurEmail'
 import AlerteBanniere from './components/AlerteBanniere'
 import AlerteBouton from './components/AlerteBouton'
 import Signature from './components/Signature'
+import Import from './pages/Import'
 
 const STAFF = ['respo', 'president']
 
@@ -89,6 +90,7 @@ export default function App() {
           <Route path="/respo/alertes" element={<Protege roles={STAFF}><Alertes /></Protege>} />
           <Route path="/respo/qr" element={<Protege roles={STAFF}><QrCodes /></Protege>} />
           <Route path="/respo/exports" element={<Protege roles={STAFF}><Exports /></Protege>} />
+          <Route path="/respo/import" element={<Protege roles={STAFF}><Import /></Protege>} />
           <Route path="/respo/banquiers" element={<Protege roles={['president']}><Banquiers /></Protege>} />
           <Route path="/respo/admin" element={<Protege roles={['president']}><Administration /></Protege>} />
           <Route path="/banquier" element={<Protege roles={['banquier']}><Banquier /></Protege>} />

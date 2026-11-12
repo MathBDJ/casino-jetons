@@ -32,6 +32,7 @@ export default function Layout({ titre, children }) {
       {estStaff && (
         <nav className="nav">
           <NavLink to="/respo" end>Joueurs</NavLink>
+          <NavLink to="/respo/import">Import</NavLink>
           <NavLink to="/recherche">Recherche</NavLink>
           <NavLink to="/respo/tables">Tables</NavLink>
           <NavLink to="/respo/plan">Plan</NavLink>
